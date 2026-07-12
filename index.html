@@ -3,255 +3,240 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TGWRAPPER — инструкция</title>
+<title>TGWRAPPER - инструмент для Telegram</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="docs">
+<div class="page">
+  <div class="ambient-grid"></div>
 
-  <aside class="sidebar">
-    <div class="brand">TGWRAPPER</div>
-    <p class="brand-sub">Инструкция</p>
-    <nav class="toc">
-      <a href="#start">1. Запуск программы</a>
-      <a href="#activation">2. Первый запуск и активация</a>
-      <a href="#menu">3. Главное меню</a>
-      <a href="#accounts">4. Аккаунты</a>
-      <a href="#sender">5. Sender</a>
-      <a href="#group-sender">6. Group Sender</a>
-      <a href="#parser">7. Parser</a>
-      <a href="#warmer">8. Warmer</a>
-      <a href="#files">9. Файлы программы</a>
-      <a href="#spintax">10. Спинтакс и разметка</a>
-    </nav>
-  </aside>
-
-  <main class="content">
-
-    <details class="mobile-toc">
-      <summary>Содержание</summary>
-      <nav class="toc">
-        <a href="#start">1. Запуск программы</a>
-        <a href="#activation">2. Первый запуск и активация</a>
-        <a href="#menu">3. Главное меню</a>
-        <a href="#accounts">4. Аккаунты</a>
-        <a href="#sender">5. Sender</a>
-        <a href="#group-sender">6. Group Sender</a>
-        <a href="#parser">7. Parser</a>
-        <a href="#warmer">8. Warmer</a>
-        <a href="#files">9. Файлы программы</a>
-        <a href="#spintax">10. Спинтакс и разметка</a>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-caret">&rsaquo;</span>
+        <span>TGWRAPPER</span>
+        <span class="cursor cursor-logo"></span>
+      </div>
+      <nav class="nav">
+        <a href="#modules">Модули</a>
+        <a href="#accounts">Аккаунты</a>
+        <a href="#pricing">Цена</a>
       </nav>
-    </details>
+    </div>
+  </header>
 
-    <header class="doc-header">
-      <h1>Руководство пользователя</h1>
-      <p class="lede">
-        Консольная программа для работы с Telegram аккаунтами: рассылка сообщений,
-        рассылка по группам, сбор аудитории из групп и прогрев аккаунтов.
-        Всё управление идёт через простое консольное меню.
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Консольный инструмент
+      </div>
+      <h1>Работа с Telegram‑аккаунтами в одном месте</h1>
+      <p class="lead">
+        <span class="lead-word">Рассылка</span>
+        <span class="lead-sep">/</span>
+        <span class="lead-word">Парсинг</span>
+        <span class="lead-sep">/</span>
+        <span class="lead-word">Прогрев</span>
       </p>
-    </header>
+      <a href="#modules" class="btn">
+        <span>Смотреть модули</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
 
-    <section id="start">
-      <h2>1. Запуск программы</h2>
-      <p>Программа запускается двойным кликом или командой:</p>
-      <pre><code>TGWRAPPER.exe</code></pre>
-      <p>
-      </p>
-    </section>
+    <!-- terminal window -->
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="terminal-name">tgwrapper — main menu</span>
+      </div>
+      <div class="terminal-body">
+        <div class="console-title">TGWRAPPER</div>
+        <div class="console-tagline">sender · parser · warmer</div>
+        <div class="console-menu-header"><span></span>Меню<span></span></div>
+        <ul class="console-list">
+          <li><span class="num">[1]</span><span class="name">Sender</span><span class="desc">рассылка (ЛС)</span></li>
+          <li><span class="num">[2]</span><span class="name">Group Sender</span><span class="desc">рассылка по группам (с входом)</span></li>
+          <li><span class="num">[3]</span><span class="name">Parser</span><span class="desc">сбор участников</span></li>
+          <li><span class="num">[4]</span><span class="name">Warmer</span><span class="desc">прогрев аккаунтов</span></li>
+          <li class="gap"></li>
+          <li><span class="num">[5]</span><span class="name">Добавить аккаунт</span></li>
+          <li><span class="num">[6]</span><span class="name">Удалить аккаунт</span></li>
+          <li><span class="num">[7]</span><span class="name">Показать аккаунты (статусы)</span></li>
+          <li><span class="num">[8]</span><span class="name">Сменить прокси</span></li>
+          <li><span class="num">[0]</span><span class="name">Выход</span></li>
+        </ul>
+        <div class="console-prompt">&gt; <span class="cursor cursor-prompt"></span></div>
+      </div>
+    </div>
+  </section>
 
-    <section id="activation">
-      <h2>2. Первый запуск и активация</h2>
-      <p>
-        При первом запуске программа покажет, что лицензия не активна, и выведет
-        <strong>HWID</strong> привязанный к этому компьютеру.
-      </p>
-      <p>Что делать:</p>
-      <ol>
-        <li>Скопировать показанный HWID.</li>
-        <li>Отправить его тому, у кого вы получили программу.</li>
-        <li>В ответ придёт файл <strong>license.key</strong>.</li>
-        <li>Положить этот файл рядом с программой, в ту же папку.</li>
-        <li>Запустить программу заново.</li>
-      </ol>
-      <p>После этого программа откроет обычное меню и будет работать.</p>
-    </section>
+  <!-- ===== Modules ===== -->
+  <section id="modules" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Модули</h2>
+      </div>
+      <p class="section-sub">Всё, что нужно в одном месте.</p>
 
-    <section id="menu">
-      <h2>3. Главное меню</h2>
-      <p>После активации появляется меню:</p>
-      <pre><code>[1] Sender          рассылка в личные сообщения и чаты
-[2] Group Sender    рассылка по группам
-[3] Parser          сбор участников группы
-[4] Warmer          прогрев аккаунтов
+      <div class="cards">
 
-[5] Добавить аккаунт
-[6] Удалить аккаунт
-[7] Показать аккаунты
-[8] Сменить прокси
-[0] Выход</code></pre>
-      <p>Чтобы выбрать пункт, нужно ввести его номер и нажать Enter.</p>
-    </section>
+        <article class="card">
+          <div class="card-head">
+            <span class="cmd">[1]</span>
+            <h3>Sender — рассылка в ЛС</h3>
+          </div>
+          <p class="card-desc">Отправка сообщений пользователям.</p>
+          <ul class="feature-list">
+            <li><span class="tick">▸</span><span>Получатели по <b>@username</b> или <b>ID</b></span></li>
+            <li><span class="tick">▸</span><span>Telegram‑разметка текста: жирный, курсив, ссылки</span></li>
+            <li><span class="tick">▸</span><span>Прикрепление фото или файла</span></li>
+            <li><span class="tick">▸</span><span>Автостоп аккаунта при обнаружении спам‑блока</span></li>
+            <li><span class="tick">▸</span><span>Итоговая таблица: отправлено, ошибок, статус по каждому аккаунту</span></li>
+          </ul>
+        </article>
 
-    <section id="accounts">
-      <h2>4. Аккаунты</h2>
-      <p>
-        Все аккаунты, которые вы добавили, хранятся в одном общем списке.
-        
-      </p>
+        <article class="card">
+          <div class="card-head">
+            <span class="cmd">[2]</span>
+            <h3>Group Sender — рассылка по группам</h3>
+          </div>
+          <p class="card-desc">Массовая отправка сообщений в список групп.</p>
+          <ul class="feature-list">
+            <li><span class="tick">▸</span><span>Список групп из текстового файла: <b>@username</b> или инвайт‑ссылки</span></li>
+            <li><span class="tick">▸</span><span>Если аккаунта нет в группе, он сам вступает перед отправкой</span></li>
+            <li><span class="tick">▸</span><span>Тот же движок текста: разметка, спинтакс, медиа</span></li>
+            <li><span class="tick">▸</span><span>Группы распределяются между выбранными аккаунтами</span></li>
+          </ul>
+        </article>
 
-      <h3>Добавление аккаунта (пункт 5)</h3>
-      <p>
-        Сначала программа спросит имя для аккаунта, это просто метка, под
-        которой он будет отображаться в списке.
-      </p>
-      <p>Затем спросит прокси. Прокси можно не указывать, если он не нужен. Поддерживаются такие форматы(Если не указывать тип прокси, то автоматически ставится socks5):</p>
-      <pre><code>ip:port
-ip:port:логин:пароль 
-логин:пароль:ip:port
-socks5://ip:port
-http://ip:port
-http://логин:пароль@ip:port</code></pre>
-      <p>Дальше есть два способа добавить сам аккаунт.</p>
+        <article class="card">
+          <div class="card-head">
+            <span class="cmd">[3]</span>
+            <h3>Parser — парсит участников</h3>
+          </div>
+          <p class="card-desc">Собирает пользователей из групп как открытых так и закрытых.</p>
+          <ul class="feature-list">
+            <li><span class="tick">▸</span><span>Открытые группы - прямой сбор полного списка участников</span></li>
+            <li><span class="tick">▸</span><span>Закрытые группы - парсинг по сообщениях в чате(количество выставляется)</span></li>
+            <li><span class="tick">▸</span><span>Автовступление в группу, если аккаунта там ещё нет</span></li>
+            <li><span class="tick">▸</span><span>Результат сохраняется в файл с названием группы (ID + username)</span></li>
+            <li><span class="tick">▸</span><span>Слишком маленькие группы пропускаются автоматически</span></li>
+          </ul>
+        </article>
 
-      <p><strong>Способ 1. Вход по телефону.</strong><br>
-      Нужно ввести API ID и API HASH (их можно получить на сайте my.telegram.org,
-      зарегистрировав приложение), затем номер телефона. После этого программа
-      сразу попросит код входа из Telegram, а если у аккаунта есть 2fa, то ещё и пароль нужно будет ввести.</p>
+        <article class="card">
+          <div class="card-head">
+            <span class="cmd">[4]</span>
+            <h3>Warmer — прогрев аккаунтов</h3>
+          </div>
+          <p class="card-desc">Имитация живой активности перед началом работы с аккаунтом.</p>
+          <ul class="feature-list">
+            <li><span class="tick">▸</span><span>Вступление в каналы и чаты из подготовленного списка</span></li>
+            <li><span class="tick">▸</span><span>Переписка между своими аккаунтами короткими фразами</span></li>
+            <li><span class="tick">▸</span><span>Вся активность укладывается в заданное время, до одного часа</span></li>
+            <li><span class="tick">▸</span><span>Итоговая статистика по каждому аккаунту</span></li>
+          </ul>
+        </article>
 
-      <p><strong>Способ 2. Импорт из tdata.</strong><br>
-      Если у вас есть папка tdata от Telegram Desktop, можно указать путь к ней.
-      Программа сама превратит её в рабочий аккаунт, вводить код и пароль не
-      нужно, так как аккаунт уже авторизован.
-      Passcode просто проскипайте.</p>
+      </div>
+    </div>
+  </section>
 
-      <h3>Показать аккаунты (пункт 7)</h3>
-      <p>Выводит таблицу со всеми аккаунтами: имя, API ID, телефон, прокси и статус.</p>
-      <p>Статус может быть:</p>
-      <table>
-        <tbody>
-          <tr><td>Рабочий</td><td>аккаунт авторизован и без ограничений</td></tr>
-          <tr><td>Спамблок</td><td>у аккаунта есть ограничения на рассылку</td></tr>
-          <tr><td>Отлетел</td><td>сессия аккаунта больше не работает или прокси не рабочий</td></tr>
-          <tr><td>Неизвестно</td><td>статус ещё не проверялся</td></tr>
-        </tbody>
-      </table>
-      <p>
-        После показа таблицы программа спросит, нужно ли обновить статусы
-        прямо сейчас. Если согласиться, можно выбрать один аккаунт, несколько
-        (например 1,3-5) или все сразу (all).
-      </p>
+  <!-- ===== Accounts ===== -->
+  <section id="accounts" class="section section-alt">
+    <div class="container">
+      <div class="section-head section-head-mb">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Менеджер аккаунтов</h2>
+      </div>
 
-      <h3>Удалить аккаунт (пункт 6)</h3>
-      <p>Показывает список аккаунтов, нужно ввести номер аккаунта для удаления и подтвердить.</p>
+      <div class="cards cards-wide">
+        <article class="card">
+          <h3 class="card-title-sm">Добавление и вход</h3>
+          <ul class="feature-list">
+            <li><span class="tick">▸</span><span>Вход по API ID и API HASH:после нужно ввести номер и код подтверждения который прийдет на него, так же пароль двухэтапной авторизации, если он включён</span></li>
+            <li><span class="tick">▸</span><span>Импорт уже готовой сессии из папки tdata</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card-title-sm">Прокси на каждый аккаунт</h3>
+          <ul class="feature-list">
+            <li><span class="tick">▸</span><span>Индивидуальный прокси (SOCKS5 / HTTP) для каждого аккаунта</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card-title-sm">Статусы аккаунтов</h3>
+          <ul class="status-list">
+            <li><span class="status-dot status-ok"></span>Рабочий</li>
+            <li><span class="status-dot status-warn"></span>Спам‑блок</li>
+            <li><span class="status-dot status-bad"></span>Не работает</li>
+            <li><span class="status-dot status-idle"></span>Не проверялся</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card-title-sm">Работа с несколькими аккаунтами</h3>
+          <ul class="feature-list">
+            <li><span class="tick">▸</span><span>Выбор диапазона аккаунтов (например «1,3‑5») или всех сразу</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      <h3>Сменить прокси (пункт 8)</h3>
-      <p>
-        Показывает список аккаунтов, нужно выбрать номер аккаунта, после этого
-        можно ввести новый прокси или оставить поле пустым, тогда прокси у
-        аккаунта будет убран.
-      </p>
+  <!-- ===== Pricing ===== -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Цена</h2>
+      </div>
+      <p class="section-sub">Один платёж навсегда.</p>
 
-      <h3>Выбор аккаунтов в модулях</h3>
-      <p>
-        Во всех четырёх модулях перед началом работы программа покажет список
-        аккаунтов и попросит выбрать, какими пользоваться. Можно указать:
-      </p>
-      <ul>
-        <li>один номер(не имя акканута), например 2</li>
-        <li>несколько через запятую, например 1,3,5</li>
-        <li>диапазон, например 1,3-5</li>
-        <li>all, чтобы взять все аккаунты сразу</li>
-      </ul>
-    </section>
+      <div class="pricing-box">
+        <div class="pricing-left">
+          <div class="pricing-amount">$30</div>
+          <p class="pricing-term">Навсегда, с поддержкой обновлений. При добавлении функционала цена будет увеличиваться(для старых пользователей обновления бесплатные)</p>
+          <ul class="pricing-includes">
+            <li><span class="check">✓</span>Все модули: Sender, Group Sender, Parser, Warmer</li>
+            <li><span class="check">✓</span>Менеджер аккаунтов и прокси</li>
+            <li><span class="check">✓</span>Работа с любым числом аккаунтов</li>
+          </ul>
+        </div>
+        <div class="pricing-right">
+          <p class="pricing-pay-label">Способы оплаты</p>
+          <ul class="pricing-pay-list">
+            <li><span class="tag tag-blue">CARD</span>Банковские карты Visa/MasterCard</li>
+            <li><span class="tag">USDT</span>BEP20</li>
+            <li><span class="tag">USDT</span>TRC20 / Tron</li>
+            <li><span class="tag">USDT</span>TON</li>
+            <li><span class="tag">USDT</span>ERC20</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="sender">
-      <h2>5. Sender: рассылка в личные сообщения и чаты</h2>
-      <p>Пункт меню 1. Отправляет сообщение по списку адресатов: пользователям в личные сообщения или в чаты.</p>
-      <p>Порядок работы:</p>
-      <ol>
-        <li>Выбрать один или несколько аккаунтов.</li>
-        <li>Указать путь к текстовому файлу с адресатами (по умолчанию программа предложит файл targets.txt из папки input). В файле каждый юзер с новой строки: @username или ID пользователя.</li>
-        <li>Указать путь к текстовому файлу с текстом сообщения (по умолчанию message.txt). В тексте можно использовать разметку Telegram и спинтакс, подробнее в разделе 10.</li>
-        <li>По желанию прикрепить фото или файл.</li>
-        <li>Указать задержку между отправками в секундах (по умолчанию 30).</li>
-      </ol>
-      <p>Список юзеров делится между выбранными аккаунтами поровну. Например если юзеров 10 и выбрано 2 аккаунта, каждый отправит по 5.</p>
-      <p>Если аккаунт получает спамблок, то юезеры которым он не отправил сообщение раскидаються между другими рабочими аккаунтами, если некуда раскидывать то они добавляються в отдельный файл results/not_sent_<время>.txt.</p>
-      <p>В конце показывается таблица: сколько отправлено, сколько ошибок, и статус по каждому аккаунту.</p>
-    </section>
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo footer-logo">
+        <span class="logo-caret">&rsaquo;</span>TGWRAPPER
+      </div>
+      <div class="footer-tagline">sender · parser · warmer</div>
+    </div>
+  </footer>
 
-    <section id="group-sender">
-      <h2>6. Group Sender: рассылка по группам</h2>
-      <p>Пункт меню 2. Работает так же, как обычная рассылка, но по списку групп.</p>
-      <p>Порядок работы:</p>
-      <ol>
-        <li>Выбрать один или несколько аккаунтов.</li>
-        <li>Указать путь к файлу со списком групп (по умолчанию groups.txt). Каждая строка это @username публичной группы или инвайт-ссылка вида t.me/+хэш.</li>
-        <li>Указать путь к файлу с текстом сообщения, так же как в Sender.</li>
-        <li>По желанию прикрепить фото или файл.</li>
-        <li>Указать задержку между отправками.</li>
-      </ol>
-      <p>Если аккаунт не в группе, он сначала вступает в неё сам, публичные группы через обычное вступление, приватные по инвайт-ссылке, и только потом отправляет сообщение.</p>
-      <p>Список групп делится между аккаунтами так же как и в лс. Ошибки показываются по каждой группе отдельно: например бан в группе, запрет на запись, истёкшая инвайт-ссылка или ограничение на рассылку. При ограничении на рассылку аккаунт останавливается.</p>
-      <p>В конце показывается таблица с итогами по каждому аккаунту.</p>
-    </section>
-
-    <section id="parser">
-      <h2>7. Parser: сбор участников группы</h2>
-      <p>Пункт меню 3. Собирает список пользователей группы в текстовый файл.</p>
-      <p>Есть два режима:</p>
-      <p><strong>Открытая группа.</strong> Список участников виден напрямую, программа просто считывает всех участников группы.</p>
-      <p><strong>Скрытая группа.</strong> Список участников закрыт, тогда программа просматривает последние сообщения в чате и собирает пользователей, которые писали сообщения. Программа спросит, сколько последних сообщений просмотреть (по умолчанию 3000).</p>
-      <p>Порядок работы:</p>
-      <ol>
-        <li>Выбрать режим (открытая или скрытая группа).</li>
-        <li>Выбрать один аккаунт.</li>
-        <li>Указать ссылку на группу или её @username.</li>
-        <li>Для закрытых групп указать, сколько сообщений просматривать.</li>
-      </ol>
-      <p>Собранные пользователи сохраняются без повторов. Результат записывается в текстовый файл, названный по имени группы, в двух колонках: ID пользователя и его @username, если он есть.</p>
-      <p>Если в группе найдено 10 пользователей или меньше, результат не сохраняется, программа выдаст ошибку.</p>
-    </section>
-
-    <section id="warmer">
-      <h2>8. Warmer: прогрев аккаунтов</h2>
-      <p>Пункт меню 4. Делает аккаунты более живыми перед началом активной работы. Состоит из двух частей.</p>
-      <p><strong>Вход в каналы и чаты.</strong> Программа заходит в каналы и чаты из подготовленного текстового файла (по умолчанию warmup_chats.txt). Строки такие же, как в списке групп: @username или инвайт-ссылка.</p>
-      <p><strong>Переписка между своими аккаунтами.</strong> Аккаунты, которые вы добавили в программу, пишут друг другу короткие фразы на английском языке. Отдельный файл с фразами не нужен, они уже встроены в программу. Для переписки нужно минимум 2 добавленных аккаунта.</p>
-      <p>Порядок работы:</p>
-      <ol>
-        <li>Выбрать один или несколько аккаунтов.</li>
-        <li>Ответить, нужно ли заходить в чаты из файла, и если да, указать путь к файлу.</li>
-        <li>Указать, сколько времени должен длиться прогрев, максимум 24 часа.</li>
-      </ol>
-      <p>В конце показывается таблица: сколько чатов пройдено и сколько сообщений отправлено по каждому аккаунту.</p>
-    </section>
-
-    <section id="files">
-      <h2>9. Файлы, с которыми работает программа</h2>
-      <p>Программа хранит и использует несколько папок и файлов рядом с собой:</p>
-      <table>
-        <tbody>
-          <tr><td>accounts</td><td>здесь хранятся добавленные аккаунты и их сессии, трогать вручную не нужно</td></tr>
-          <tr><td>results</td><td>сюда сохраняются файлы, собранные парсером</td></tr>
-          <tr><td>input</td><td>папка с примерами файлов для рассылки, групп и прогрева</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="spintax">
-      <h2>10. Спинтакс и разметка текста</h2>
-      <p>В текстах для рассылки и прогрева можно использовать спинтакс. Это фигурные скобки с вариантами через вертикальную черту:</p>
-      <pre><code>{Привет|Здравствуйте|Хай}</code></pre>
-      <p>Программа каждый раз выбирает один случайный вариант, поэтому сообщения получаются разными, даже если рассылается один и тот же текст. Варианты можно вкладывать друг в друга.</p>
-      <p>В текстах для Sender и Group Sender также работает разметка Telegram:</p>
-      <pre><code>&lt;b&gt;жирный текст&lt;/b&gt;
-&lt;i&gt;курсив&lt;/i&gt;
-&lt;a href="https://t.me/имя"&gt;ссылка&lt;/a&gt;</code></pre>
-  </main>
 </div>
 
 </body>
